@@ -165,7 +165,7 @@ namespace LapseStudioGtkUI
 			this.vbox1.Name = "vbox1";
 			this.vbox1.Spacing = 6;
 			// Container child vbox1.Gtk.Box+BoxChild
-			this.UIManager.AddUiFromString (@"<ui><menubar name='MainMenuBar'><menu name='MenuAction' action='MenuAction'><menuitem name='newAction' action='newAction'/><menuitem name='openAction' action='openAction'/><separator/><menuitem name='saveAction' action='saveAction'/><menuitem name='saveAsAction' action='saveAsAction'/><separator/><menuitem name='quitAction' action='quitAction'/></menu><menu name='SettingsAction' action='SettingsAction'><menuitem name='preferencesAction' action='preferencesAction'/></menu><menu name='HelpAction' action='HelpAction'><menuitem name='helpAction' action='helpAction'/><menuitem name='aboutAction' action='aboutAction'/></menu></menubar></ui>");
+			this.UIManager.AddUiFromString ("<ui><menubar name='MainMenuBar'><menu name='MenuAction' action='MenuAction'><menuitem name='newAction' action='newAction'/><menuitem name='openAction' action='openAction'/><separator/><menuitem name='saveAction' action='saveAction'/><menuitem name='saveAsAction' action='saveAsAction'/><separator/><menuitem name='quitAction' action='quitAction'/></menu><menu name='SettingsAction' action='SettingsAction'><menuitem name='preferencesAction' action='preferencesAction'/></menu><menu name='HelpAction' action='HelpAction'><menuitem name='helpAction' action='helpAction'/><menuitem name='aboutAction' action='aboutAction'/></menu></menubar></ui>");
 			this.MainMenuBar = ((global::Gtk.MenuBar)(this.UIManager.GetWidget ("/MainMenuBar")));
 			this.MainMenuBar.Name = "MainMenuBar";
 			this.vbox1.Add (this.MainMenuBar);
@@ -174,7 +174,7 @@ namespace LapseStudioGtkUI
 			w2.Expand = false;
 			w2.Fill = false;
 			// Container child vbox1.Gtk.Box+BoxChild
-			this.UIManager.AddUiFromString (@"<ui><toolbar name='MainToolBar'><toolitem name='AddAction' action='AddAction'/><toolitem name='CalculateAction' action='CalculateAction'/><toolitem name='ReloadAction' action='ReloadAction'/><toolitem name='SaveAction' action='SaveAction'/><toolitem name='CancelAction' action='CancelAction'/></toolbar></ui>");
+			this.UIManager.AddUiFromString ("<ui><toolbar name='MainToolBar'><toolitem name='AddAction' action='AddAction'/><toolitem name='CalculateAction' action='CalculateAction'/><toolitem name='ReloadAction' action='ReloadAction'/><toolitem name='SaveAction' action='SaveAction'/><toolitem name='CancelAction' action='CancelAction'/></toolbar></ui>");
 			this.MainToolBar = ((global::Gtk.Toolbar)(this.UIManager.GetWidget ("/MainToolBar")));
 			this.MainToolBar.Name = "MainToolBar";
 			this.MainToolBar.ShowArrow = false;
@@ -352,9 +352,9 @@ namespace LapseStudioGtkUI
 			this.FrameSelectScale = new global::Gtk.HScale (null);
 			this.FrameSelectScale.CanFocus = true;
 			this.FrameSelectScale.Name = "FrameSelectScale";
-			this.FrameSelectScale.Adjustment.Upper = 100D;
-			this.FrameSelectScale.Adjustment.PageIncrement = 10D;
-			this.FrameSelectScale.Adjustment.StepIncrement = 1D;
+			this.FrameSelectScale.Adjustment.Upper = 100;
+			this.FrameSelectScale.Adjustment.PageIncrement = 10;
+			this.FrameSelectScale.Adjustment.StepIncrement = 1;
 			this.FrameSelectScale.DrawValue = true;
 			this.FrameSelectScale.Digits = 0;
 			this.FrameSelectScale.ValuePos = ((global::Gtk.PositionType)(3));
@@ -390,10 +390,10 @@ namespace LapseStudioGtkUI
 			this.BrightnessScale.Sensitive = false;
 			this.BrightnessScale.CanFocus = true;
 			this.BrightnessScale.Name = "BrightnessScale";
-			this.BrightnessScale.Adjustment.Lower = -100D;
-			this.BrightnessScale.Adjustment.Upper = 100D;
-			this.BrightnessScale.Adjustment.PageIncrement = 10D;
-			this.BrightnessScale.Adjustment.StepIncrement = 1D;
+			this.BrightnessScale.Adjustment.Lower = -100;
+			this.BrightnessScale.Adjustment.Upper = 100;
+			this.BrightnessScale.Adjustment.PageIncrement = 10;
+			this.BrightnessScale.Adjustment.StepIncrement = 1;
 			this.BrightnessScale.DrawValue = true;
 			this.BrightnessScale.Digits = 0;
 			this.BrightnessScale.ValuePos = ((global::Gtk.PositionType)(3));
