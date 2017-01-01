@@ -477,7 +477,7 @@ namespace Timelapse_API
                             SVtmp = lines[i].Substring(lines[i].IndexOf(":") + 2);
                             if (int.TryParse(SVtmp, out tmpI))
                             {
-                                Frames[f].Sv = Math.Log(tmpI, 3.125f);
+                                Frames[f].Sv = Math.Log(tmpI / 3.125f, 2);
                                 Frames[f].SVstring = SVtmp;
                             }
                             else Frames[f].SVstring = "N/A";
