@@ -992,7 +992,19 @@ namespace Timelapse_API
 
         private void BrCalc_Exif()
         {
-            //LTODO: write br calc exif
+            foreach (var frame in Frames)
+            {
+                frame.OriginalBrightness = Math.Pow(2, -frame.Bv);
+            }
+
+            var mean = Frames.Sum(f => f.OriginalBrightness) / Frames.Count;
+
+            foreach (var frame in Frames)
+            {
+                // normalize for visualization, only relative values are of importance
+                frame.AlternativeBrightness = frame.OriginalBrightness / mean;
+                frame.NewBrightness = frame.AlternativeBrightness;
+            }
         }
 
         #endregion
