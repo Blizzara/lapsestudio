@@ -67,6 +67,7 @@
     <Compile Include="Programs\RT\PP3Versions\318.cs" />
     <Compile Include="Programs\RT\PP3Versions\319.cs" />
     <Compile Include="Programs\RT\PP3Versions\321.cs" />
+    <Compile Include="Programs\RT\PP3Versions\326.cs" />
     <Compile Include="ProjectManager.cs" />
     <Compile Include="General\Project.cs" />
     <Compile Include="Programs\RT\PP3.cs" />

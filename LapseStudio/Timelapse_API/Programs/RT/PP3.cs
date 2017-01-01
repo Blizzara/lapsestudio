@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Collections.Generic;
+using System.Globalization;
 
 namespace Timelapse_API
 {
@@ -112,6 +113,9 @@ namespace Timelapse_API
                     case 321:
                         Write321(Writer);
                         break;
+                    case 326:
+                        Write326(Writer);
+                        break;
 
                     default:
                         throw new NotSupportedException("This fileversion is not supported!");
@@ -134,6 +138,46 @@ namespace Timelapse_API
             return output;
         }
         
+        private void Add(PP3entry val)
+        {
+            Values.Add(val.Name, val);
+        }
+
+        private void Write(StreamWriter writer, string header, string name)
+        {
+            CultureInfo culture = new CultureInfo("en-US");
+            string digits = "0.################"; // up to 16 digits
+
+            PP3entry entry = Values[header + "." + name];
+            object val = entry.Value;
+            string valstring;
+            if (val is bool)
+            {
+                valstring = val.ToString().ToLower();
+
+            }
+            else if (val is double)
+            {
+                valstring = ((double)val).ToString(digits, culture);
+            }
+            else if (val is int)
+            {
+                valstring = val.ToString();
+            }
+            else if (val is string)
+            {
+                valstring = val.ToString();
+            }
+            else if (val is PP3Curve)
+            {
+                valstring = ((PP3Curve)val).ToString();
+            }
+            else
+            {
+                throw new InvalidOperationException("Value " + header + "." + name + " has unknown type: " + val);
+            }
+            writer.WriteLine(name + "=" + valstring);
+        }
 
         private string GetValue(string line)
         {
@@ -185,6 +229,9 @@ namespace Timelapse_API
                     break;
                 case 321:
                     Read321(lines);
+                    break;
+                case 326:
+                    Read326(lines);
                     break;
 
                 default:
