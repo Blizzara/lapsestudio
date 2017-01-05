@@ -130,13 +130,13 @@ namespace LapseStudioGtkUI
 			global::Gtk.Box.BoxChild w3 = ((global::Gtk.Box.BoxChild)(this.hbox1 [this.fixed3]));
 			w3.Position = 1;
 			// Container child hbox1.Gtk.Box+BoxChild
-			this.ThreadSpin = new global::Gtk.SpinButton (1D, 100D, 1D);
+			this.ThreadSpin = new global::Gtk.SpinButton (1, 100, 1);
 			this.ThreadSpin.CanFocus = true;
 			this.ThreadSpin.Name = "ThreadSpin";
-			this.ThreadSpin.Adjustment.PageIncrement = 1D;
-			this.ThreadSpin.ClimbRate = 1D;
+			this.ThreadSpin.Adjustment.PageIncrement = 1;
+			this.ThreadSpin.ClimbRate = 1;
 			this.ThreadSpin.Numeric = true;
-			this.ThreadSpin.Value = 1D;
+			this.ThreadSpin.Value = 1;
 			this.hbox1.Add (this.ThreadSpin);
 			global::Gtk.Box.BoxChild w4 = ((global::Gtk.Box.BoxChild)(this.hbox1 [this.ThreadSpin]));
 			w4.Position = 2;
@@ -412,11 +412,11 @@ namespace LapseStudioGtkUI
 			this.JpgQualityScale.WidthRequest = 100;
 			this.JpgQualityScale.CanFocus = true;
 			this.JpgQualityScale.Name = "JpgQualityScale";
-			this.JpgQualityScale.Adjustment.Lower = 1D;
-			this.JpgQualityScale.Adjustment.Upper = 100D;
-			this.JpgQualityScale.Adjustment.PageIncrement = 10D;
-			this.JpgQualityScale.Adjustment.StepIncrement = 10D;
-			this.JpgQualityScale.Adjustment.Value = 100D;
+			this.JpgQualityScale.Adjustment.Lower = 1;
+			this.JpgQualityScale.Adjustment.Upper = 100;
+			this.JpgQualityScale.Adjustment.PageIncrement = 10;
+			this.JpgQualityScale.Adjustment.StepIncrement = 10;
+			this.JpgQualityScale.Adjustment.Value = 100;
 			this.JpgQualityScale.DrawValue = true;
 			this.JpgQualityScale.Digits = 0;
 			this.JpgQualityScale.ValuePos = ((global::Gtk.PositionType)(0));
